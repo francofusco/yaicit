@@ -26,9 +26,11 @@ env:
 
 # clone and run industrial_ci
 install:
-  # - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
+  - git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
+
+before_script:
+  - sudo pip install codecov
+
 script:
-  # - .industrial_ci/travis.sh
-  - pwd
-  - ls
-  - ls ../
+  - .industrial_ci/travis.sh
+  - - codecov --gcov-root .
