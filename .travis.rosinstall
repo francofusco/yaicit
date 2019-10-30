@@ -2,3 +2,7 @@
     uri: https://github.com/francofusco/try_dependent_industrial_ci.git
     local-name: try_dependent_industrial_ci
     version: master
+- git:
+    uri: https://github.com/francofusco/try_industrial_ci.git
+    local-name: try_industrial_ci
+    version: master
